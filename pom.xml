@@ -66,44 +66,47 @@
 	</dependencies>
 	<build>
 		<plugins>
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.6.0</version>
-				<configuration>
-					<compilerId>eclipse</compilerId>
-				</configuration>
-				<dependencies>
-					<dependency>
-						<groupId>org.codehaus.plexus</groupId>
-						<artifactId>plexus-compiler-eclipse</artifactId>
-						<version>2.8.1</version>
-					</dependency>
-				</dependencies>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<version>3.1.1</version>
-				<configuration>
-					<descriptorRefs>
-						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs>
-				</configuration>
-				<executions>
-					<execution>
-						<id>assemble-all</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>3.1.0</version>
-			</plugin>
+
+        <!-- *** Disable the eclipse compiler since it's not clear how to skip tests... -->
+		<!-- 	<plugin> -->
+		<!-- 		<artifactId>maven-compiler-plugin</artifactId> -->
+		<!-- 		<version>3.6.0</version> -->
+		<!-- 		<configuration> -->
+		<!-- 			<compilerId>eclipse</compilerId> -->
+		<!-- 		</configuration> -->
+		<!-- 		<dependencies> -->
+		<!-- 			<dependency> -->
+		<!-- 				<groupId>org.codehaus.plexus</groupId> -->
+		<!-- 				<artifactId>plexus-compiler-eclipse</artifactId> -->
+		<!-- 				<version>2.8.1</version> -->
+		<!-- 			</dependency> -->
+		<!-- 		</dependencies> -->
+		<!-- 	</plugin> -->
+		<!-- 	<plugin> -->
+		<!-- 		<groupId>org.apache.maven.plugins</groupId> -->
+		<!-- 		<artifactId>maven-assembly-plugin</artifactId> -->
+		<!-- 		<version>3.1.1</version> -->
+		<!-- 		<configuration> -->
+		<!-- 			<descriptorRefs> -->
+		<!-- 				<descriptorRef>jar-with-dependencies</descriptorRef> -->
+		<!-- 			</descriptorRefs> -->
+		<!-- 		</configuration> -->
+		<!-- 		<executions> -->
+		<!-- 			<execution> -->
+		<!-- 				<id>assemble-all</id> -->
+		<!-- 				<phase>package</phase> -->
+		<!-- 				<goals> -->
+		<!-- 					<goal>single</goal> -->
+		<!-- 				</goals> -->
+		<!-- 			</execution> -->
+		<!-- 		</executions> -->
+		<!-- 	</plugin> -->
+		<!-- 	<plugin> -->
+		<!-- 		<groupId>org.apache.maven.plugins</groupId> -->
+		<!-- 		<artifactId>maven-javadoc-plugin</artifactId> -->
+		<!-- 		<version>3.1.0</version> -->
+		<!-- 	</plugin> -->
+
 		</plugins>
 	</build>
 </project>
